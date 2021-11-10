@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import SET_TEXT_FILTER from '../reducers/filters';
+import {setTextFilter} from '../actions/filters';
 
 const ExpenseListFilters = (props) => (
   <div>
