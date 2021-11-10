@@ -1,0 +1,53 @@
+import React from 'react';
+
+export default class ExpenseForm extends React.Component{
+  state = {
+    description:'',
+    note:'',
+    amount: ''
+  };
+  onDescriptionChange = (e)=>{
+    const description = e.target.value;
+    this.setState(()=>({ description }));
+  };
+  onChangeTextArea = (e)=>{
+    const note = e.target.value;
+    this.setState(()=>({ noteue }));
+  };
+  onAmountChange = (e) =>{
+    const amount = e.target.value;
+    if(amount.match(/^\d{1,9}(\.\d{0,2})?$/)){
+        this.setState(()=>({ amount }));
+    }
+
+  }
+  render(){
+    return (
+      <div>
+        <form>
+            <input
+                type="text"
+                placeholder="description"
+                value={this.state.desciption}
+                onChange={this.onDescriptionChange}
+                autoFocus
+              />
+            <input
+                type="text"
+                value={this.state.amount}
+                placeholder="Amount"
+                onChange={this.onAmountChange}
+            />
+            <textarea
+                placeholder="Add a note for your input*(optional)"
+                value={this.state.note}
+                onChange={this.onChangeTextArea}
+            />
+            <button>
+              Add Expense
+            </button>
+        </form>
+      </div>
+    )
+  }
+}
