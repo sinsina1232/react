@@ -1,8 +1,6 @@
 import selectExpense from '../../selectors/expenses';
 import moment from 'moment';
-const expenses =[{id: 1, description:'Gum', note: '', amount: 195, createdAt:0},
-                  {id: 2, description:'Rent', note: '', amount: 19500, createdAt: moment(0).subtract(4, 'days').valueOf()},
-                {id: 3, description:'Credit cards', note: '', amount: 4500, createdAt:moment(0).add(4, 'days').valueOf()}];
+import expenses from '../fixtures/expenses';
 const defaultValue = { text: '', sortBy:'date', startDate: undefined, endDate: undefined };
 test('should filter by test value', ()=>{
   const filters = { ...defaultValue, text:'e' };
