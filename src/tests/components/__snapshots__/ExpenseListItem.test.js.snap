@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render the first item of the fixture 1`] = `
+<div>
+  <[object Object]
+    to="/edit/undefined"
+  >
+    <h3 />
+  </[object Object]>
+  <p>
+     - 
+  </p>
+</div>
+`;

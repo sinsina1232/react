@@ -2452,7 +2452,14 @@ enzyme-adapter-utils@^1.0.0:
     prop-types "^15.7.2"
     semver "^5.7.1"
 
-enzyme@3.0.0:
+enzyme-to-json@^3.0.0-beta6:
+  version "3.0.0-beta6"
+  resolved "https://registry.yarnpkg.com/enzyme-to-json/-/enzyme-to-json-3.0.0-beta6.tgz#db537fbd9d7d06b8f65124d115c38694f798f055"
+  integrity sha512-verrJtDFsaDoaKR8q9/ZUWz4u5/p0/+dCv74+D3PGrkYFU2alLzwUI/ADkE+Wi8ldzkk14dCcu7/605LbFCPPw==
+  dependencies:
+    lodash "^4.17.4"
+
+enzyme@^3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/enzyme/-/enzyme-3.0.0.tgz#94ce364254dc654c4e619b25eecc644bf6481de7"
   integrity sha1-lM42QlTcZUxOYZsl7sxkS/ZIHec=
