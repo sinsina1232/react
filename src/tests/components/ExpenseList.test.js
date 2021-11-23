@@ -1,13 +1,14 @@
-import { shallow } from 'enzyme';
-import React from 'react';
 import { ExpenseList } from '../../components/ExpenseList';
 import expenses from '../fixtures/expenses';
+import React from 'react';
+import { shallow } from 'enzyme';
 
-test('should render expense list from expenses',()=>{
-  const wrapper = shallow(<ExpenseList expenses={expenses} /> );
-  expect(wrapper).toMatchSnapshot();
+test('should render expenselist with expenses',()=>{
+const wrapper = shallow(<ExpenseList expenses={expenses}/>);
+expect(wrapper).toMatchSnapshot();
 });
-test('should render the message on the empty array',()=>{
-  const wrapper = shallow(<ExpenseList expenses={[]} /> );
+
+test('should render ExpenseList with empty message',()=>{
+  const wrapper = shallow(<ExpenseList expenses={[]}/>);
   expect(wrapper).toMatchSnapshot();
 });

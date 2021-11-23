@@ -1,9 +1,9 @@
-import { shallow } from 'enzyme';
-import React from 'react';
+import ExpenseListItem from '../../components/ExpenseListItem';
 import expenses from '../fixtures/expenses';
-import { ExpenseListItem } from '../../components/ExpenseListItem';
+import React from 'react';
+import { shallow } from 'enzyme';
 
-test('should render the first item of the fixture',()=>{
-  const wrapper = shallow(<ExpenseListItem expense={expenses[0]} />);
+test('should render single element from the fixture',()=>{
+  const wrapper = shallow(<ExpenseListItem { ...expenses[0] } />);
   expect(wrapper).toMatchSnapshot();
 });
