@@ -27,6 +27,7 @@
     "moment": "^2.29.1",
     "node-sass": "^6.0.1",
     "normalize.css": "7.0.0",
+    "numeral": "2.0.6",
     "raf": "3.3.2",
     "react": "^18.0.0-beta-f320ef88f-20211116",
     "react-addons-shallow-compare": "^15.6.3",
@@ -44,8 +45,8 @@
   },
   "devDependencies": {
     "chalk": "^5.0.0",
-    "enzyme-to-json": "3.0.1",
     "enzyme": "^3.11.0",
+    "enzyme-to-json": "3.0.1",
     "jest": "20.0.4",
     "webpack-dev-server": "2.5.1"
   }
