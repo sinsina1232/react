@@ -32,17 +32,34 @@ export const removeExpense = ({ id } = {}) => ({
   id
 });
 
+export const startRemoveExpense = ({ id } = {})=>{
+  return (dispatch) =>{
+  return database.ref(`expenses/${id}`).remove().then(()=>{
+    dispatch(removeExpense({id}));
+});
+};
+};
+
 // EDIT_EXPENSE
 export const editExpense = (id, updates) => ({
   type: 'EDIT_EXPENSE',
   id,
   updates
 });
+export const startEditExpense = (id, updates) =>{
+  return (dispatch)=>{
+    return database.ref(`expenses/${id}`).update(updates).then(()=>{
+      dispatch(editExpense(id, updates));
+    });
+  };
+};
 
 export const setExpenses = (expenses) =>({
   type: 'SET_EXPENSES',
   expenses
 });
+
+//seting the startin point
 
 export const startSetExpenses = () => {
   return (dispatch) =>{
@@ -59,6 +76,8 @@ export const startSetExpenses = () => {
 
 };
 };
+
+
 //1. fetch all the data once,
 //2. parse the data into an array
 //3. dispatch SET_EXPENSES
